@@ -2,17 +2,12 @@ import React from "react";
 import { Button, View, Text, Pressable } from "react-native";
 
 import { styles } from "./BatButtonStyles";
+import { BatTextInput } from "../BatTextInput/BatTextInput";
 
 export function BatButton() {
   return (
-    <View>
-      <Button
-        onPress={() => {
-          console.log("olá");
-        }}
-        title="Click Aqui"
-        accessibilityLabel="click em mim"
-      />
+    <>
+      <BatTextInput />
 
       <Pressable
         onPress={() => {
@@ -27,9 +22,10 @@ export function BatButton() {
         onPress={() => {
           console.log("pressionado");
         }}
+        style={styles.button}
       >
-        <Text>⚡ COPY</Text>
+        <Text style={styles.text}>⚡ COPY</Text>
       </Pressable>
-    </View>
+    </>
   );
 }
